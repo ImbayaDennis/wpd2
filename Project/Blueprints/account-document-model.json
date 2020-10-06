@@ -1,0 +1,230 @@
+[{
+    "id": "1",
+    "username": "finch",
+    "firstname": "Dennis",
+    "lastname": "Imbaya",
+    "email": "dimbay200@caledonian.ac.uk",
+    "data": {
+        "modules":[
+            {
+                "id": "64",
+                "name": "WPD2",
+                "facilitator": "Allan",
+                "start": "2020-09-07",
+                "end": "2020-12-20",
+                "projects": [
+                    {
+                        "id": "rsdfh54",
+                        "name": "Web application",
+                        "description": "Build a stack application",
+                        "start": "2020-09-14",
+                        "due": "2020-11-13",
+                        "milestones": [
+                            {
+                                "id": "9ufjks84",
+                                "name": "First review",
+                                "description": "Have at least 10% of each aspect down",
+                                "due": "2020-10-1"
+                            },
+                            {
+                                "id": "98gjk6y4",
+                                "name": "Second review",
+                                "description": "Have at least 20% of each aspect down",
+                                "due": "2020-10-4"
+                            },
+                            {
+                                "id": "98w6hs84",
+                                "name": "Third review",
+                                "description": "Have at least 30% of each aspect down",
+                                "due": "2020-10-10"
+                            },
+                            {
+                                "id": "y67uks84",
+                                "name": "Forth review",
+                                "description": "Have at least 40% of each aspect down",
+                                "due": "2020-10-14"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "sidyrr54",
+                        "name": "Web design",
+                        "description": "Build a full web application",
+                        "start": "2020-09-14",
+                        "due": "2020-11-13",
+                        "milestones": [
+                            {
+                                "id": "9ufsert54",
+                                "name": "First review",
+                                "description": "Have at least 10% of each aspect down",
+                                "due": "2020-10-1"
+                            },
+                            {
+                                "id": "98gfd5754",
+                                "name": "Second review",
+                                "description": "Have at least 20% of each aspect down",
+                                "due": "2020-10-4"
+                            },
+                            {
+                                "id": "98w5yr5y",
+                                "name": "Third review",
+                                "description": "Have at least 30% of each aspect down",
+                                "due": "2020-10-10"
+                            },
+                            {
+                                "id": "sdt54yrs",
+                                "name": "Forth review",
+                                "description": "Have at least 40% of each aspect down",
+                                "due": "2020-10-14"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "fgi6rr54",
+                        "name": "Web platform",
+                        "description": "Build out a web application",
+                        "start": "2020-09-14",
+                        "due": "2020-11-13",
+                        "milestones": [
+                            {
+                                "id": "9ufsert54",
+                                "name": "First review",
+                                "description": "Have at least 10% of each aspect down",
+                                "due": "2020-10-1"
+                            },
+                            {
+                                "id": "98gfd5754",
+                                "name": "Second review",
+                                "description": "Have at least 20% of each aspect down",
+                                "due": "2020-10-4"
+                            },
+                            {
+                                "id": "98w5yr5y",
+                                "name": "Third review",
+                                "description": "Have at least 30% of each aspect down",
+                                "due": "2020-10-10"
+                            },
+                            {
+                                "id": "sdt54yrs",
+                                "name": "Forth review",
+                                "description": "Have at least 40% of each aspect down",
+                                "due": "2020-10-14"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "66",
+                "name": "WPD1",
+                "facilitator": "Allan",
+                "start": "2020-09-07",
+                "end": "2020-12-20",
+                "projects": [
+                    {
+                        "id": "rsdfh54",
+                        "name": "Web application",
+                        "description": "Build a stack application",
+                        "start": "2020-09-14",
+                        "due": "2020-11-13",
+                        "milestones": [
+                            {
+                                "id": "9ufjks84",
+                                "name": "First review",
+                                "description": "Have at least 10% of each aspect down",
+                                "due": "2020-10-1"
+                            },
+                            {
+                                "id": "98gjk6y4",
+                                "name": "Second review",
+                                "description": "Have at least 20% of each aspect down",
+                                "due": "2020-10-4"
+                            },
+                            {
+                                "id": "98w6hs84",
+                                "name": "Third review",
+                                "description": "Have at least 30% of each aspect down",
+                                "due": "2020-10-10"
+                            },
+                            {
+                                "id": "y67uks84",
+                                "name": "Forth review",
+                                "description": "Have at least 40% of each aspect down",
+                                "due": "2020-10-14"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "sidyrr54",
+                        "name": "Web design",
+                        "description": "Build a full web application",
+                        "start": "2020-09-14",
+                        "due": "2020-11-13",
+                        "milestones": [
+                            {
+                                "id": "9ufsert54",
+                                "name": "First review",
+                                "description": "Have at least 10% of each aspect down",
+                                "due": "2020-10-1"
+                            },
+                            {
+                                "id": "98gfd5754",
+                                "name": "Second review",
+                                "description": "Have at least 20% of each aspect down",
+                                "due": "2020-10-4"
+                            },
+                            {
+                                "id": "98w5yr5y",
+                                "name": "Third review",
+                                "description": "Have at least 30% of each aspect down",
+                                "due": "2020-10-10"
+                            },
+                            {
+                                "id": "sdt54yrs",
+                                "name": "Forth review",
+                                "description": "Have at least 40% of each aspect down",
+                                "due": "2020-10-14"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "fgi6rr54",
+                        "name": "Web platform",
+                        "description": "Build out a web application",
+                        "start": "2020-09-14",
+                        "due": "2020-11-13",
+                        "milestones": [
+                            {
+                                "id": "9ufsert54",
+                                "name": "First review",
+                                "description": "Have at least 10% of each aspect down",
+                                "due": "2020-10-1"
+                            },
+                            {
+                                "id": "98gfd5754",
+                                "name": "Second review",
+                                "description": "Have at least 20% of each aspect down",
+                                "due": "2020-10-4"
+                            },
+                            {
+                                "id": "98w5yr5y",
+                                "name": "Third review",
+                                "description": "Have at least 30% of each aspect down",
+                                "due": "2020-10-10"
+                            },
+                            {
+                                "id": "sdt54yrs",
+                                "name": "Forth review",
+                                "description": "Have at least 40% of each aspect down",
+                                "due": "2020-10-14"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "preferences": [
+            
+        ]
+    }
+}]
