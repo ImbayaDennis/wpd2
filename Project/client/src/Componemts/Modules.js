@@ -13,7 +13,7 @@ const Modules = (props) =>{
     },[]);
 
     const fetchData = async () =>{
-       const raw = await fetch("http://localhost:5000/modules");
+       const raw = await fetch("/modules");
        const data = await raw.json();
         //console.log(data);
         setModules(data);

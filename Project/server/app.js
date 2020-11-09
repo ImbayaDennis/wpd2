@@ -10,13 +10,13 @@ mongoose.connect(`mongodb+srv://${process.env.user}:${process.env.pwd}@cluster0.
 });
 
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use((req, res, next) =>{
+app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-Width, Content-Type, Accept, Authorization");
-    if(req.method === 'OPTIONS'){
+    if (req.method === 'OPTIONS') {
         res.header("Access-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
         return res.status(200).json({});
     }
@@ -26,18 +26,20 @@ app.use((req, res, next) =>{
 const modules = require('./api/routes/modules');
 const projects = require('./api/routes/projects');
 const timelines = require('./api/routes/timelines');
+const users = require('./api/routes/users');
 
 app.use('/modules', modules);
 app.use('/projects', projects);
 app.use('/timelines', timelines);
+app.use('/users', users);
 
-app.use((req, res, next) =>{
+app.use((req, res, next) => {
     const err = new Error('Not found');
     err.status = 404;
     next(err);
 });
 
-app.use((err, req, res, next) =>{
+app.use((err, req, res, next) => {
     res.status(err.status || 500);
     res.json({
         "error": {

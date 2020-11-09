@@ -4,7 +4,7 @@ const Popup = (props) =>{
 
     const prev_def = (e) =>{
         e.preventDefault();
-        console.log(e);
+        console.log("Posted");
     }
 
     let popup;

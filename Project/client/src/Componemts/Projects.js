@@ -12,7 +12,7 @@ const Projects = (props) =>{
     },[]);
 
     const fetchData = async () =>{
-        const raw = await fetch(`http://localhost:5000/modules/${props.match.params.id}`);
+        const raw = await fetch(`/modules/${props.match.params.id}`);
         const data = await raw.json();
         //console.log(data.projects);
         setProjects(data.projects);
@@ -23,6 +23,7 @@ const Projects = (props) =>{
         <div className="main">
             <Header title="Coursework Projects" back={true} prev_pg="/dashboard/modules" rest={props} />
             {projects.map(project=>(<Link key={project._id} to={`/dashboard/projects/${project._id}`}><Tile title={project.name} desc={project.desc} time={"Due on: " + project.end} dest={"/projects/" + project._id} /></Link>))}
+            
             <Add action={`/modules/${props.match.params.id}`} />
         </div>
     );
