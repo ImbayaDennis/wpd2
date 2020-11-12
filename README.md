@@ -1,1 +1,3 @@
-# wpd2
+## Web platform development 2
+#
+Coping with many coursework deliverables is a stressful part of every student’s life. Design and implement a web-based coursework scheduling application to help students cope with multiple coursework assignments.  At its core, the coursework scheduling application contains a list of coursework projects that have to be submitted. The application allows the user to define his or her own milestones for each of the coursework projects. These are only visible to this user, i.e. require a login. In order to be useful the coursework projects and their milestones exist for longer than one session.
