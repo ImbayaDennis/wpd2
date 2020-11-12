@@ -2,8 +2,7 @@ import React from 'react';
 
 const Tile = (props) =>{
 
-    const time = ((props.time).toString().substr(0, 23));
-    // = (props.time).substr(0, 15);
+    const time = ((props.time).toString().substr(0, 18));
     return(
         
         <div className="tile">

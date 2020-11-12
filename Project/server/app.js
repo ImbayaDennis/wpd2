@@ -24,13 +24,9 @@ app.use((req, res, next) => {
 })
 
 const modules = require('./api/routes/modules');
-const projects = require('./api/routes/projects');
-const timelines = require('./api/routes/timelines');
 const users = require('./api/routes/users');
 
 app.use('/modules', modules);
-app.use('/projects', projects);
-app.use('/timelines', timelines);
 app.use('/users', users);
 
 app.use((req, res, next) => {

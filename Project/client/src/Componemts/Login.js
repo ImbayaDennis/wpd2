@@ -22,6 +22,7 @@ const Login = (props) =>{
                 </form>
 
                 <div className="links">
+                {/* eslint-disable-next-line*/}
                     <a href="#">Forgot password?</a><br/><br/>
                     <Link to='/signup'>
                         <p>New here? Create an account</p><br/>
@@ -30,8 +31,8 @@ const Login = (props) =>{
 
 
                 <div className="xtra-btn">
-                    <button>Login with <span className="fab fa-google"></span></button>
-                    <button>Login with <span className="fab fa-facebook"></span></button>
+                    <button>Login with <i className="fab fa-google"></i></button>
+                    <button>Login with <i className="fab fa-facebook"></i></button>
                 </div>
 
             </div>

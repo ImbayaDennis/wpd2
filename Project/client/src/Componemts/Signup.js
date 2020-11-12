@@ -27,8 +27,8 @@ const Signup = () =>{
 
 
                     <div className="xtra-btn">
-                        <button>Sign up with</button>
-                        <button>Sign up with</button>
+                    <button>Signup with <i className="fab fa-google"></i></button>
+                    <button>Signup with <i className="fab fa-facebook"></i></button>
                     </div>
 
                 </div>

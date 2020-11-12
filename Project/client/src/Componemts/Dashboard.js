@@ -6,6 +6,7 @@ import Milestones from './Milestones';
 import Profile from './Profile';
 import Projects from './Projects';
 import Timeline from './Timeline';
+import Page404 from './Page404';
 import PrivateRouter from './auth/PrivateRoute';
 
 const Dashboard = () =>{
@@ -19,7 +20,8 @@ const Dashboard = () =>{
                     <PrivateRouter exact path="/dashboard/milestones" component={Milestones}  />
                     <PrivateRouter exact path="/dashboard/profile" component={Profile}  />
                     <PrivateRouter exact path="/dashboard/modules/:id" component={Projects}  />
-                    <PrivateRouter exact path="/dashboard/projects/:id" component={Timeline}  />
+                    <PrivateRouter exact path="/dashboard/modules/:id/:id" component={Timeline}  />
+                    <PrivateRouter component={Page404} />
                 </Switch>
             </div>
         </Router>

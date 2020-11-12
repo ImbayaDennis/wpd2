@@ -1,27 +1,28 @@
-import React from 'react'
-import Header from './Header'
-import model from './account-document-model'
-import { Inject, ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from '@syncfusion/ej2-react-schedule'
+import React from 'react';
+import Header from './Header';
+import { Inject, ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from '@syncfusion/ej2-react-schedule';
+import { DataManager, JsonAdaptor } from '@syncfusion/ej2-data'
 
 
-class Timeline extends React.Component{
-    constructor(props){
-        super(props);
-        this.data = model[0].data.modules[0].projects[0].milestones;
-        console.log(this.props);
-    }
-
-    
+class Timeline extends React.Component {
 
     render(){
-        return(
-        <div className="main">
-            <Header title="Timeline" back={true} prev_pg={this.props.history.goBack()} rest={this.props} />
+        const cur_url = this.props.location.pathname
 
-            <ScheduleComponent currentView="Month" eventSettings={{ dataSource: this.data }}>
-                <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize]} />
-            </ScheduleComponent>
-        </div>
+        const remoteData = new DataManager({
+            url: `http://localhost:5000${cur_url.substring(10, cur_url.length)}`,
+            adaptor: new JsonAdaptor(),
+            crossDomain: true
+        });
+
+        return (
+            <div className="main">
+                <Header title="Timeline" back={true} prev_pg={cur_url.substring(0, cur_url.length - 24)} />
+
+                <ScheduleComponent currentView="Month" eventSettings={{ dataSource: remoteData }}>
+                    <Inject services={[Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize]} />
+                </ScheduleComponent>
+            </div>
         )
     }
 }

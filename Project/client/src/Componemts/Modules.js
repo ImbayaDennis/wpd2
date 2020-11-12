@@ -15,7 +15,6 @@ const Modules = (props) =>{
     const fetchData = async () =>{
        const raw = await fetch("/modules");
        const data = await raw.json();
-        //console.log(data);
         setModules(data);
     }
 

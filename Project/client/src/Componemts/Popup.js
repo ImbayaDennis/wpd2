@@ -2,11 +2,6 @@ import React from 'react';
 
 const Popup = (props) =>{
 
-    const prev_def = (e) =>{
-        e.preventDefault();
-        console.log("Posted");
-    }
-
     let popup;
     if(props.formState){
         popup = "form-open";

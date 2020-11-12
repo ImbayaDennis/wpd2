@@ -138,6 +138,11 @@ form button, .login-main button{
   display: inline; 
 }
 
+.xtra-btn button i{
+  color: var(--tertiary-color);
+  display: inline;
+  padding: 0 .5rem;
+}
 
 
 /*------------------Main theme section-----------------*/
