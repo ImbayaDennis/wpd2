@@ -1,43 +1,71 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import superagent from 'superagent';
 import auth from './auth/auth'
 
-const Login = (props) =>{
+class Login extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            email: "",
+            password: ""
+        }
+    }
 
-    return (
+    refreshPage(){
+        window.location.reload();
+     }
+
+    handleEmail(event) {
+        this.setState({ email: event.target.value });
+    }
+
+    handlePassword(event) {
+        this.setState({ password: event.target.value });
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+
+        superagent
+        .post('/')
+        .send(this.state)
+        .end((err, res)=>{
+            if(err){this.setState({errorMessage: "authentication failed"}); return;}
+            localStorage.setItem("token", res.body.Token);
+            this.refreshPage();
+        });
+    }
+
+
+    render() {
+        const isAuth = auth.isAuthenticated();
+        return (
         <div className="login-main">
-            <div className="container">
+            {isAuth ? <Redirect to={{pathname: '/dashboard/modules'}}/> : (
+                <div className="container">
                 <div className="title">
                     <h2>Login to your account</h2>
                 </div>
-                
-                <form className="_form">
-                    <input type="text" name="username" placeholder="Username or email" required/>
-                    <input type="password" name="pwd" placeholder="Password" required/>
-                    <button type="submit" onClick={
-                        () =>{
-                            auth.login(() =>{props.history.push("/dashboard/modules")})
-                        }
-                    }>Login</button>
+
+                <form className="_form" onSubmit={this.handleSubmit.bind(this)}>
+                    <input type="email" name="email" placeholder="Email address" value={this.state.email} onChange={this.handleEmail.bind(this)} required />
+                    <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handlePassword.bind(this)} required />
+                    <button type="submit">Login</button>
                 </form>
 
                 <div className="links">
-                {/* eslint-disable-next-line*/}
-                    <a href="#">Forgot password?</a><br/><br/>
+                    {/* eslint-disable-next-line*/}
+                    <a href="#">Forgot password?</a><br /><br />
                     <Link to='/signup'>
-                        <p>New here? Create an account</p><br/>
+                        <p>New here? Create an account</p><br />
                     </Link>
                 </div>
-
-
-                <div className="xtra-btn">
-                    <button>Login with <i className="fab fa-google"></i></button>
-                    <button>Login with <i className="fab fa-facebook"></i></button>
-                </div>
-
             </div>
+            )}
         </div>
-    );
+        )
+    }
 }
 
 export default Login;

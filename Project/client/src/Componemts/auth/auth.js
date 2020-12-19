@@ -3,18 +3,12 @@ class Auth{
         this.authenticated = false;
     }
 
-    login(cb){
-        this.authenticated = true;
-        cb();
-    }
-
-    logout(cb){
-        this.authenticated = false;
-        cb();
+    logout(){
+        localStorage.removeItem('token');
     }
 
     isAuthenticated(){
-        return this.authenticated;
+        return localStorage.getItem('token');
     }
 }
 

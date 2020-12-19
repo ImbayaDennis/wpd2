@@ -10,23 +10,11 @@
   --tertiary-color-t: rgba(13, 57, 114, .85);
   --accent-color: #86a9ca;
   --accent-color-t: rgba(134, 169, 202, .85);
+  --danger-color: #e80b0b;
+  --danger-color-t: rgba(232, 11, 11, .85);
   --radius: 5px;
   --radius2: 50%;
   --trans-speed: 500ms;
-}
-
-.light{
-  --white: #FFFFFF;
-  --black: #000000;
-  --black-t: rgba(0, 0, 0, .7);
-  --primary-color: #5b79c6;
-  --primary-color-t: rgba(91, 121, 198, .85);
-  --secondary-color: #FFFFFF;
-  --secondary-color-t: rgba(255, 255, 255, 0.85);
-  --tertiary-color: rgb(13, 57, 114);
-  --tertiary-color-t: rgba(13, 57, 114, .85);
-  --accent-color: #86a9ca;
-  --accent-color-t: rgba(134, 169, 202, .85);
 }
 
 /*----------------General Styling--------------------*/
@@ -79,7 +67,7 @@ form button, .login-main button{
   margin: auto;
 }
 
-._form input{
+._form input, ._form textarea{
   padding: 1rem;
   outline: none;
   margin: 1rem;
@@ -91,7 +79,7 @@ form button, .login-main button{
   color: var(--white);
 }
 
-._form input::placeholder{
+._form input::placeholder, ._form textarea::placeholder{
   color: var(--white);
   letter-spacing: 2.5px;
   font-family: 'Raleway', sans-serif;
@@ -321,14 +309,13 @@ span{
 /*--------------Tiles-------------------------*/
 .tile{
   text-align: left;
-  margin: 1rem auto;
-  width: 90%;
   min-height: 20vh;
   border-radius: var(--radius);
   color: var(--white);
   background-color: var(--primary-color);
   box-shadow: .5px .5px 3px 2px var(--accent-color-t);
   transition: var(--trans-speed);
+  width: 80vw;
 }
 
 .tile:hover{
@@ -345,6 +332,39 @@ span{
 
 .tile a{
   color: var(--white);
+}
+
+.tile-tab{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+  width: 90%;
+}
+
+.del-icon{
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin: .5rem;
+  color: var(--white);
+  background-color: var(--tertiary-color);
+  border-radius: var(--radius);
+  transition: var(--trans-speed);
+}
+
+.del-icon:hover{
+  background-color: var(--danger-color);
+}
+
+.del-icon i::before{
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: .5rem .6rem;
 }
 
 /*------------------Add button---------------------*/
@@ -395,4 +415,22 @@ span{
 .form-close{
   height: 0;
   opacity: 0;
+}
+
+/*-----------------Timeline----------------------*/
+
+.timeline{
+  text-align: left;
+  min-height: 20vh;
+  border-radius: var(--radius);
+  color: var(--black);
+  box-shadow: .5px .5px 3px 2px var(--accent-color-t);
+  padding: 2rem;
+  transition: var(--trans-speed);
+  width: 80vw;
+}
+
+
+.timeline h2, .timeline h5{
+  font-weight: 400;
 }

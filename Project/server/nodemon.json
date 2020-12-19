@@ -1,6 +1,7 @@
 {
     "env": {
         "user": "wpd2-web-app",
-        "pwd": "YzCr3h7cQs9mWHfx"
+        "pwd": "YzCr3h7cQs9mWHfx",
+        "JWT_KEY": "secret_pass_key"
     }
 }
